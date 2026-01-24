@@ -1,0 +1,1 @@
+Houses API models used for data transfer between client and server (DTOs).

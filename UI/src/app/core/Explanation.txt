@@ -1,0 +1,1 @@
+Houses singleton services and modules used app-wide (e.g., authentication).

@@ -1,0 +1,1 @@
+Contains modules for specific business functionalities (e.g., product catalog).

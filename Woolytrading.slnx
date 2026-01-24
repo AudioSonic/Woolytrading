@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="API/API.csproj" Id="88262612-4cfa-49c9-be58-16d3ff3d6512" />
+  <Project Path="Core/Core.csproj" Id="53a00ad1-33a5-4c6b-a78a-0db570e45dea" />
+  <Project Path="UI/UI.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>

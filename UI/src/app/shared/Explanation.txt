@@ -1,0 +1,1 @@
+Holds reusable components, directives, and pipes (e.g., a product card component).
