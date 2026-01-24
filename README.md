@@ -26,3 +26,9 @@ Coming soon.
 ## Project Status
 **Phase 1 – Foundation (in progress)**  
 Focus on establishing a clean and understandable technical base for future development.
+
+## UI Concept (Figma Mockup)
+The following mockup represents the planned layout of the homepage.  
+It serves as a visual reference and is not yet fully implemented.  
+<img width="610" height="348" alt="grafik" src="https://github.com/user-attachments/assets/a3103cf6-0d9a-46ff-9d5e-6bcbe58c5c74" />
+
