@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Core.Entities
 {
     public class Product
     {
+        [Key]
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string? Description { get; set; }
@@ -14,10 +16,10 @@ namespace Core.Entities
         public int? CategoryId { get; set; }
         public int? ConditionId { get; set; }
         public int? RarityId { get; set; }
-        public int? TypeId { get; set; }
+        public int? TypesId { get; set; }
         public Category? Category { get; set; }
-        public Conditions? Condition { get; set; }
-        public Rarities? Rarity { get; set; }
+        public Condition? Condition { get; set; }
+        public Rarity? Rarity { get; set; }
         public Types? Type { get; set; }
     }
 }
