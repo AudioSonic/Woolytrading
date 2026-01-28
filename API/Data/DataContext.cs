@@ -15,5 +15,12 @@ namespace API.Data
         public DbSet<Condition> Conditions { get; set; }
         public DbSet<Rarity> Rarities { get; set; }
         public DbSet<Types> Types { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasColumnType("decimal(18,2)");
+        }
     }
 }

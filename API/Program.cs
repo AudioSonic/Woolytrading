@@ -12,6 +12,8 @@ namespace API
 
             ///Implementierung der Datenbankverbindung
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            builder.Services.AddSwaggerGen();
             
             //Die Services werden dem Container hinzugefügt. Alle Tabellen werden in
             //DataContext gespeichert
@@ -33,12 +35,13 @@ namespace API
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
