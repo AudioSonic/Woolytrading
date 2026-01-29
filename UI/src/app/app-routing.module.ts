@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './core/layout/home/home.component';
+import { ProductsComponent } from './core/layout/products/products.component';
+import { NotFoundComponent } from './core/layout/not-found/not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to home
+  { path: '**', component: NotFoundComponent } // Optional: Wildcard for 404 pages
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
