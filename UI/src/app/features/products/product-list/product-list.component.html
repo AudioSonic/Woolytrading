@@ -1,0 +1,8 @@
+<h2>Products</h2>
+
+<div class="product-entry"
+     *ngFor="let product of products; trackBy: trackByProductId">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price | currency:'USD' }}</h4>
+  <p>{{ product.description }}</p>
+</div>

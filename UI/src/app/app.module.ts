@@ -8,6 +8,8 @@ import { FooterComponent } from './core/layout/footer/footer.component';
 import { HomeComponent } from './core/layout/home/home.component';
 import { ProductsComponent } from './core/layout/products/products.component';
 import { NotFoundComponent } from './core/layout/not-found/not-found.component';
+import { ProductListComponent } from './features/products/product-list/product-list.component';
+import { ProductDetailComponent } from './features/products/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NotFoundComponent } from './core/layout/not-found/not-found.component';
     FooterComponent,
     HomeComponent,
     ProductsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductListComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
