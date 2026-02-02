@@ -10,6 +10,7 @@ import { ProductsComponent } from './core/layout/products/products.component';
 import { NotFoundComponent } from './core/layout/not-found/not-found.component';
 import { ProductListComponent } from './features/products/product-list/product-list.component';
 import { ProductDetailComponent } from './features/products/product-detail/product-detail.component';
+import { ProductCardComponent } from './features/products/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductDetailComponent } from './features/products/product-detail/produ
     ProductsComponent,
     NotFoundComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
