@@ -1,8 +1,9 @@
-<h2>Products</h2>
+<ng-container *ngIf="products$ | async as products; else loading">
+  <app-product-card *ngFor="let product of products; trackBy: trackByProductId"
+                    [product]="product">
+  </app-product-card>
+</ng-container>
 
-<div class="product-entry"
-     *ngFor="let product of products; trackBy: trackByProductId">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency:'USD' }}</h4>
-  <p>{{ product.description }}</p>
-</div>
+<ng-template #loading>
+  <p>Lade Produkte...</p>
+</ng-template>

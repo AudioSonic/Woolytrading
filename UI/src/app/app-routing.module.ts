@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'productList', component: ProductListComponent },
   { path: 'products/:id', component: ProductDetailComponent },
+  { path: 'productDetail', component: ProductDetailComponent }, 
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to home
   { path: '**', component: NotFoundComponent } // Optional: Wildcard for 404 pages
 ];

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from '../../../model/product.model';
+import { ProductService } from '../ProductService'; // Pfad ggf. anpassen
 
 @Component({
   selector: 'app-product-list',
@@ -6,30 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  // This is the property you are adding
-  public products: any[] = [
-    {
-      id: 1,
-      name: 'Wooly Jumper',
-      description: 'A warm and cozy jumper made from the finest digital wool.',
-      price: 49.99
-    },
-    {
-      id: 2,
-      name: 'Code Scarf',
-      description: 'A stylish scarf that keeps you warm during long debugging sessions.',
-      price: 24.99
-    },
-    {
-      id: 3,
-      name: 'Syntax Socks',
-      description: 'Comfortable socks guaranteed to reduce syntax errors by 10%.',
-      price: 9.99
-    }
-  ];
-  trackByProductId(index: number, product: any): number {
+  products$!: Observable<Product[]>;
+
+  constructor(private productService: ProductService) {
+    this.products$ = this.productService.getProducts();
+  }
+
+  trackByProductId(index: number, product: Product): number {
     return product.id;
   }
-  constructor() { }
-
 }
