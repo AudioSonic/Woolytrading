@@ -1,0 +1,13 @@
+:host {
+  display: block; /* Ensures the component behaves like a block-level element */
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  background-color: green;
+  transition: box-shadow 0.3s ease-in-out; /* Optional: Smooth shadow transition on hover */
+}
+
+:host(:hover) {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12); /* Optional: Slightly larger shadow on hover */
+}
