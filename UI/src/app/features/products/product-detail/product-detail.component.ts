@@ -10,7 +10,6 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id'); // 'id' must match the route path: 'products/:id'

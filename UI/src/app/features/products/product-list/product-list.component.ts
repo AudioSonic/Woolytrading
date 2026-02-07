@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../../../model/product.model';
-import { ProductService } from '../ProductService'; // Pfad ggf. anpassen
+import { ProductService } from '../ProductService'; 
 
 @Component({
   selector: 'app-product-list',
@@ -15,7 +15,7 @@ export class ProductListComponent {
     this.products$ = this.productService.getProducts();
   }
 
-  trackByProductId(index: number, product: Product): number {
+  trackByProductId(index: number, product: Product): string {
     return product.id;
   }
 }

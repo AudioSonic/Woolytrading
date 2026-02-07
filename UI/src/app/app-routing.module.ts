@@ -9,7 +9,7 @@ import { ProductDetailComponent } from './features/products/product-detail/produ
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'productList', component: ProductListComponent },
+  { path: 'product-list', component: ProductListComponent },
   { path: 'products/:id', component: ProductDetailComponent },
   { path: 'productDetail', component: ProductDetailComponent }, 
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to home

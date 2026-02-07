@@ -1,9 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-export interface Product {
-  name: string;
-  price: number;
-}
+import { Product } from '../../../model/product.model'; // Pfad ggf. anpassen
 
 @Component({
   selector: 'app-product-card',

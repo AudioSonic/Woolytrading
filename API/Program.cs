@@ -25,10 +25,22 @@ namespace API
 
             // Add services to the container.
 
+            //Ermöglich die Nutzung der API und der Angular App auf localhost:4200
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
+
+
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
-
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -42,6 +54,8 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.UseCors("AllowAngular");
 
             app.MapControllers();
 
